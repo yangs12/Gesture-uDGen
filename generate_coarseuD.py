@@ -5,6 +5,8 @@ import os
 from compute_utils import *
 
 data_folders = ['shrec22_real_train', 'shrec22_real_test']
+# Please fill in your input path. The generated videos are in the same folder, e.g., 'shrec22_real_train_coarseuD/'
+# The images for visualizations will be in 'shrec22_real_train_coarseuD/images/'
 data_path = ''
 
 start_t = 0 # the start time of the data (in s)
@@ -60,7 +62,6 @@ for set_name in data_folders:
 
                 if plot_flag:
                     plot_uD(vertice_hist, plot_uD_vmin, plot_uD_vmax, end_t, file_name, vhist_path+'images/',num_bins, vrange_ls, uD_frame_interval)
-                break
 
     mean_value = np.mean(means)
     std_value = np.mean(stds)

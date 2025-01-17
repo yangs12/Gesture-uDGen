@@ -22,7 +22,7 @@ def get_radial_velocity(vertices_ls, uD_frame_interval, camera_pos):
     v_radial = -np.multiply(vertices_v, r_unit).sum(axis = 2) * uD_bins_ps
     return v_radial, norm
 
-def get_v_hist(v_radial, norm, range_ls = [-3,3], num_bins=128, distance_pow_loss=True):
+def get_v_hist(v_radial, norm, range_ls = [-3,3], num_bins=128, distance_pow_loss=False):
     hist_ls = []
     if distance_pow_loss:
         # power loss is inversely proportional to the square of the distance

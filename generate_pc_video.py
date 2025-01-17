@@ -5,6 +5,7 @@ import cv2
 import os
 
 data_folders = ['shrec22_real_train', 'shrec22_real_test']
+# Please fill in your input path. The generated videos are in the same folder, e.g., 'shrec22_real_train_pc_videos/'
 data_path = '' 
 
 cam = [0, -0.3, -0.3] # camera location
