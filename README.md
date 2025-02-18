@@ -27,7 +27,7 @@ pip install -r requirements.txt
 ```
 
 ## Gesture Parameters
-For coarse micro-Doppler generation and ground truth gesture micro-Doppler capture in qualitative evaluation, we employed the TI AWR6843AOP radar with the following parameters, which differ from those used for gait capture.
+For coarse micro-Doppler generation, we employed the TI AWR6843AOP radar with the following parameters. 
 | Parameter          | Value  | Parameter          | Value  | Parameter                 | Value  |
 |----------------------|---------|----------------------|---------|-----------------------------|---------|
 | Tx                  | 3       | Rx                   | 4       | Chirps per frame (per Tx)  | 64      |
@@ -35,3 +35,5 @@ For coarse micro-Doppler generation and ground truth gesture micro-Doppler captu
 | Max range          | 0.96 m  | Range resolution     | 0.0375 m | Azimuth resolution        | 30°     |
 | Maximum velocity   | 3 m/s   | Velocity resolution  | 0.09 m/s | Elevation resolution      | 30°     |
 | STFT window size   | 128     | Overlap ratio        | 87.5%    | Window                     | Hamming |
+
+These parameters are optimized for gesture recognition. For instance, the short maximum range aligns with the ego-centric perspective of hand movements, while multiple transmitters and receivers enhance angle diversity for better hand identification. In contrast to gait recognition, where subjects are typically at a longer range (5–15m), the direction of hand gestures might play a more significant role due to their close-range motion.
