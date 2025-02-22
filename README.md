@@ -57,7 +57,7 @@ Gesture motion shares similar challenges with gait motion, where subtle finger m
   * Classifier loss and feature Loss: These two loss terms require a pretrained MobileNetv2 classifier on the training data for conditional GAN.
   * Temporal flipping: Since flipping the micro-Doppler means reversing the time sequence, the gait pipeline makes sure no temporal flipping for the dataset. 
   * Temporal cropping: One step in the gait preprocessing is cropping 1.28-second signatures into 0.64-second snapshots in training, to match walking dynamics (step time 0.64-second) and reduce phase sensitivity. For gestures, cropping may not be necessary since gestures can be segmented with a clear start and end time.
-  * Hyper-parameters: The hyperparameters used in the gait pipeline might need changes. For example, `unet128` is used as the default generator to match the gait pairs' shape, while gesture input shape could be different.
+  
 
 ## Differences between Fintuning Gesture and Gait Coarse Micro-Doppler
 When repurposing the gait micro-Doppler synthesis pipeline for gesture applications, here shows some key differences and some challenges:
