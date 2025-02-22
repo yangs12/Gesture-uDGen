@@ -66,8 +66,8 @@ When repurposing the gait micro-Doppler synthesis pipeline for gesture applicati
   * Effects of range and direction: Unlike gait (typically captured at long distance), gestures are recorded at close range. This increases the gesture micro-Doppler signatures' sensitivity to motion directions. Besides, gesture motion directions can be more diverse than gait motion. 
   * Clutter: Gesture datasets might include background clutter (e.g., chairs, tables), unlike the relatively clutter-free gait datasets (MVDoppler).
 * Preprocessing and Model
-  * Temporal Length: Gestures vary in duration (e.g., pinch vs. swipe), so input lengths may differ from gait and across gestures.
-  * Temporal cropping: While temporal cropping is important for gait pipeline to manage model's robustness to phase variations, it might be unnecessary for segmented gesture data.
-  * Network Hyperparameters: The hyperparameters may need adjustments to fit the different feature complexities between gestures and gait, e.g., the generator architecture, discriminator layers, number of epochs, etc.
+  * Temporal Length: Gestures vary in duration (e.g., pinch vs. swipe) and their dynamics can be fast-changing, so input lengths may differ from gait and across gestures. 
+  * Temporal cropping: While temporal cropping is important for gait pipeline to manage model's robustness to phase variations, it might be unnecessary for segmented gesture data. The gesture motion is also more non-periodic.
+  * Network Hyperparameters: Gestures usually involve finer movements than gait motion. Thus, the hyperparameters may need adjustments to fit the different feature complexities, e.g., the generator architecture, discriminator layers, number of epochs, etc.
 
   
